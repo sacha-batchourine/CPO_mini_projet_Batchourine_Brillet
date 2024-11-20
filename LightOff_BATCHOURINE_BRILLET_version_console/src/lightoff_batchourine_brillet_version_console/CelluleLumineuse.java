@@ -6,11 +6,11 @@ package lightoff_batchourine_brillet_version_console;
  */
 
 /**
- *
+ *BATCHOURINE BRILLET TDC
  * @author sachabatchourine
  */
 /**
- * La classe CelluleLumineuse représente une cellule lumineuse
+ * La classe CelluleLumineuse représente une cellule allumé
  * qui peut être dans l'état "allumée" ou "éteinte".
  * Elle offre des méthodes pour gérer son état.
  */
@@ -41,7 +41,7 @@ public class CelluleLumineuse {
 
     /**
      * Éteint la cellule lumineuse.
-     * Si la cellule est déjà éteinte, cette méthode n'a aucun effet.
+     * Si la cellule est déjà éteinte, cette méthode ne fais rien.
      */
     public void eteindreCellule() {
         this.etat = false; // Force l'état à éteint
@@ -50,7 +50,7 @@ public class CelluleLumineuse {
     /**
      * Vérifie si la cellule est éteinte.
      *
-     * @return true si la cellule est éteinte, false sinon.
+     * @return true si la cellule est éteinte, false si elle est allumée.
      */
     public boolean estEteint() {
         return !this.etat; // Retourne true si éteinte
