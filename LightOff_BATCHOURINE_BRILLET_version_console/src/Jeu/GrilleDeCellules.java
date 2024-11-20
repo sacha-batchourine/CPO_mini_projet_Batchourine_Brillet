@@ -1,0 +1,123 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package Jeu;
+import java.util.Random;
+/**
+ *Classe qui représente la GrilleDeCellules
+ * @author baptistebrillet
+ */
+public class GrilleDeCellules {
+    private CelluleLumineuse[][] matriceCellules;
+    private int nbLignes;
+    private int nbColonnes;
+
+    /**
+     * Constructeur de la classe.
+     * Initialise une grille de cellules éteintes.
+     * 
+     * @param p_nbLignes   Nombre de lignes.
+     * @param p_nbColonnes Nombre de colonnes.
+     */
+    public GrilleDeCellules(int p_nbLignes, int p_nbColonnes) {
+        this.nbLignes = p_nbLignes;
+        this.nbColonnes = p_nbColonnes;
+        this.matriceCellules = new CelluleLumineuse[nbLignes][nbColonnes];
+
+        for (int i = 0; i < nbLignes; i++) {
+            for (int j = 0; j < nbColonnes; j++) {
+                matriceCellules[i][j] = new CelluleLumineuse();
+            }
+        }
+    }
+
+    /** Éteint toutes les cellules de la grille. */
+    public void eteindreToutesLesCellules() {
+        for (int i = 0; i < nbLignes; i++) {
+            for (int j = 0; j < nbColonnes; j++) {
+                matriceCellules[i][j].eteindreCellule();
+            }
+        }
+    }
+
+    /** Active une ligne de cellules. */
+    public void activerLigneDeCellules(int idLigne) {
+        for (int j = 0; j < nbColonnes; j++) {
+            matriceCellules[idLigne][j].activerCellule();
+        }
+    }
+
+    /** Active une colonne de cellules. */
+    public void activerColonneDeCellules(int idColonne) {
+        for (int i = 0; i < nbLignes; i++) {
+            matriceCellules[i][idColonne].activerCellule();
+        }
+    }
+
+    /** Active la diagonale descendante (haut gauche vers bas droit). */
+    public void activerDiagonaleDescendante() {
+        for (int i = 0; i < Math.min(nbLignes, nbColonnes); i++) {
+            matriceCellules[i][i].activerCellule();
+        }
+    }
+
+    /** Active la diagonale montante (bas gauche vers haut droit). */
+    public void activerDiagonaleMontante() {
+        for (int i = 0; i < Math.min(nbLignes, nbColonnes); i++) {
+            matriceCellules[i][nbColonnes - 1 - i].activerCellule();
+        }
+    }
+
+    /** Mélange la grille en activant aléatoirement des lignes, colonnes ou diagonales. */
+    public void melangerMatriceAleatoirement(int nbTours) {
+        Random rand = new Random();
+        eteindreToutesLesCellules();
+
+        for (int i = 0; i < nbTours; i++) {
+            int choix = rand.nextInt(3);
+            if (choix == 0) {
+                activerLigneDeCellules(rand.nextInt(nbLignes));
+            } else if (choix == 1) {
+                activerColonneDeCellules(rand.nextInt(nbColonnes));
+            } else {
+                if (rand.nextBoolean()) {
+                    activerDiagonaleDescendante();
+                } else {
+                    activerDiagonaleMontante();
+                }
+            }
+        }
+    }
+
+    /** Vérifie si toutes les cellules sont éteintes. */
+    public boolean cellulesToutesEteintes() {
+        for (int i = 0; i < nbLignes; i++) {
+            for (int j = 0; j < nbColonnes; j++) {
+                if (!matriceCellules[i][j].estEteint()) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("   ");
+        for (int j = 0; j < nbColonnes; j++) {
+            sb.append(j).append(" ");
+        }
+        sb.append("\n");
+
+        for (int i = 0; i < nbLignes; i++) {
+            sb.append(i).append(" | ");
+            for (int j = 0; j < nbColonnes; j++) {
+                sb.append(matriceCellules[i][j]).append(" ");
+            }
+            sb.append("\n");
+        }
+        return sb.toString();
+    }
+}
