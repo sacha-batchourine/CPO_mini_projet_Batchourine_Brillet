@@ -13,11 +13,13 @@ public class GrilleDeCellules {
     private int nbLignes;
     private int nbColonnes;
 
+    /** Constructeur de la grille avec des dimensions spécifiées. */
     public GrilleDeCellules(int p_nbLignes, int p_nbColonnes) {
         this.nbLignes = p_nbLignes;
         this.nbColonnes = p_nbColonnes;
         this.matriceCellules = new CelluleLumineuse[nbLignes][nbColonnes];
 
+        // Initialisation des cellules à l'état éteint.
         for (int i = 0; i < nbLignes; i++) {
             for (int j = 0; j < nbColonnes; j++) {
                 matriceCellules[i][j] = new CelluleLumineuse();
@@ -25,6 +27,16 @@ public class GrilleDeCellules {
         }
     }
 
+    /** Méthodes pour obtenir le nombre de lignes et de colonnes. */
+    public int getNbLignes() {
+        return nbLignes;
+    }
+
+    public int getNbColonnes() {
+        return nbColonnes;
+    }
+
+    /** Éteint toutes les cellules de la grille. */
     public void eteindreToutesLesCellules() {
         for (int i = 0; i < nbLignes; i++) {
             for (int j = 0; j < nbColonnes; j++) {
@@ -33,30 +45,35 @@ public class GrilleDeCellules {
         }
     }
 
+    /** Active une ligne de cellules. */
     public void activerLigneDeCellules(int idLigne) {
         for (int j = 0; j < nbColonnes; j++) {
             matriceCellules[idLigne][j].activerCellule();
         }
     }
 
+    /** Active une colonne de cellules. */
     public void activerColonneDeCellules(int idColonne) {
         for (int i = 0; i < nbLignes; i++) {
             matriceCellules[i][idColonne].activerCellule();
         }
     }
 
+    /** Active la diagonale descendante. */
     public void activerDiagonaleDescendante() {
         for (int i = 0; i < Math.min(nbLignes, nbColonnes); i++) {
             matriceCellules[i][i].activerCellule();
         }
     }
 
+    /** Active la diagonale montante. */
     public void activerDiagonaleMontante() {
         for (int i = 0; i < Math.min(nbLignes, nbColonnes); i++) {
             matriceCellules[i][nbColonnes - 1 - i].activerCellule();
         }
     }
 
+    /** Mélange la grille en activant des lignes, colonnes ou diagonales aléatoires. */
     public void melangerMatriceAleatoirement(int nbTours) {
         Random rand = new Random();
         eteindreToutesLesCellules();
@@ -77,6 +94,7 @@ public class GrilleDeCellules {
         }
     }
 
+    /** Vérifie si toutes les cellules sont éteintes. */
     public boolean cellulesToutesEteintes() {
         for (int i = 0; i < nbLignes; i++) {
             for (int j = 0; j < nbColonnes; j++) {

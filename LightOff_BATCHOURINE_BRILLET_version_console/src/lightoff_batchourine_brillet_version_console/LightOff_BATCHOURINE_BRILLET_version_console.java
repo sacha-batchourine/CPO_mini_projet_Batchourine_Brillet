@@ -16,8 +16,6 @@ public class LightOff_BATCHOURINE_BRILLET_version_console {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Partie partie = new Partie();
-        partie.initialiserPartie();
-        partie.lancerPartie();
+        new Partie(); // Lance le menu principal
     }
 }
