@@ -13,13 +13,6 @@ public class GrilleDeCellules {
     private int nbLignes;
     private int nbColonnes;
 
-    /**
-     * Constructeur de la classe.
-     * Initialise une grille de cellules éteintes.
-     * 
-     * @param p_nbLignes   Nombre de lignes.
-     * @param p_nbColonnes Nombre de colonnes.
-     */
     public GrilleDeCellules(int p_nbLignes, int p_nbColonnes) {
         this.nbLignes = p_nbLignes;
         this.nbColonnes = p_nbColonnes;
@@ -32,7 +25,6 @@ public class GrilleDeCellules {
         }
     }
 
-    /** Éteint toutes les cellules de la grille. */
     public void eteindreToutesLesCellules() {
         for (int i = 0; i < nbLignes; i++) {
             for (int j = 0; j < nbColonnes; j++) {
@@ -41,35 +33,30 @@ public class GrilleDeCellules {
         }
     }
 
-    /** Active une ligne de cellules. */
     public void activerLigneDeCellules(int idLigne) {
         for (int j = 0; j < nbColonnes; j++) {
             matriceCellules[idLigne][j].activerCellule();
         }
     }
 
-    /** Active une colonne de cellules. */
     public void activerColonneDeCellules(int idColonne) {
         for (int i = 0; i < nbLignes; i++) {
             matriceCellules[i][idColonne].activerCellule();
         }
     }
 
-    /** Active la diagonale descendante (haut gauche vers bas droit). */
     public void activerDiagonaleDescendante() {
         for (int i = 0; i < Math.min(nbLignes, nbColonnes); i++) {
             matriceCellules[i][i].activerCellule();
         }
     }
 
-    /** Active la diagonale montante (bas gauche vers haut droit). */
     public void activerDiagonaleMontante() {
         for (int i = 0; i < Math.min(nbLignes, nbColonnes); i++) {
             matriceCellules[i][nbColonnes - 1 - i].activerCellule();
         }
     }
 
-    /** Mélange la grille en activant aléatoirement des lignes, colonnes ou diagonales. */
     public void melangerMatriceAleatoirement(int nbTours) {
         Random rand = new Random();
         eteindreToutesLesCellules();
@@ -90,7 +77,6 @@ public class GrilleDeCellules {
         }
     }
 
-    /** Vérifie si toutes les cellules sont éteintes. */
     public boolean cellulesToutesEteintes() {
         for (int i = 0; i < nbLignes; i++) {
             for (int j = 0; j < nbColonnes; j++) {
@@ -112,6 +98,7 @@ public class GrilleDeCellules {
         sb.append("\n");
 
         for (int i = 0; i < nbLignes; i++) {
+            sb.append("  ").append("-".repeat(nbColonnes * 2)).append("\n");
             sb.append(i).append(" | ");
             for (int j = 0; j < nbColonnes; j++) {
                 sb.append(matriceCellules[i][j]).append(" ");
