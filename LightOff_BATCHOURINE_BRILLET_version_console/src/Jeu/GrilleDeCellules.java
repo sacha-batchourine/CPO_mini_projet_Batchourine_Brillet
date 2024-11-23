@@ -45,14 +45,16 @@ public class GrilleDeCellules {
         }
     }
 
-    /** Active une ligne de cellules. */
+    /** Active une ligne de cellules.
+     * @param idLigne */
     public void activerLigneDeCellules(int idLigne) {
         for (int j = 0; j < nbColonnes; j++) {
             matriceCellules[idLigne][j].activerCellule();
         }
     }
 
-    /** Active une colonne de cellules. */
+    /** Active une colonne de cellules.
+     * @param idColonne */
     public void activerColonneDeCellules(int idColonne) {
         for (int i = 0; i < nbLignes; i++) {
             matriceCellules[i][idColonne].activerCellule();
@@ -73,28 +75,30 @@ public class GrilleDeCellules {
         }
     }
 
-    /** Mélange la grille en activant des lignes, colonnes ou diagonales aléatoires. */
+    /** Mélange la grille en activant des lignes, colonnes ou diagonales aléatoires.
+     * @param nbTours */
     public void melangerMatriceAleatoirement(int nbTours) {
         Random rand = new Random();
         eteindreToutesLesCellules();
 
         for (int i = 0; i < nbTours; i++) {
             int choix = rand.nextInt(3);
-            if (choix == 0) {
-                activerLigneDeCellules(rand.nextInt(nbLignes));
-            } else if (choix == 1) {
-                activerColonneDeCellules(rand.nextInt(nbColonnes));
-            } else {
-                if (rand.nextBoolean()) {
-                    activerDiagonaleDescendante();
-                } else {
-                    activerDiagonaleMontante();
+            switch (choix) {
+                case 0 -> activerLigneDeCellules(rand.nextInt(nbLignes));
+                case 1 -> activerColonneDeCellules(rand.nextInt(nbColonnes));
+                default -> {
+                    if (rand.nextBoolean()) {
+                        activerDiagonaleDescendante();
+                    } else {
+                        activerDiagonaleMontante();
+                    }
                 }
             }
         }
     }
 
-    /** Vérifie si toutes les cellules sont éteintes. */
+    /** Vérifie si toutes les cellules sont éteintes.
+     * @return  */
     public boolean cellulesToutesEteintes() {
         for (int i = 0; i < nbLignes; i++) {
             for (int j = 0; j < nbColonnes; j++) {
