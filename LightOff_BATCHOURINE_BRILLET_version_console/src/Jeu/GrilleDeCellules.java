@@ -9,11 +9,13 @@ import java.util.Random;
  * @author baptistebrillet
  */
 public class GrilleDeCellules {
-    private CelluleLumineuse[][] matriceCellules;
-    private int nbLignes;
-    private int nbColonnes;
+    private final CelluleLumineuse[][] matriceCellules;
+    private final int nbLignes;
+    private final int nbColonnes;
 
-    /** Constructeur de la grille avec des dimensions spécifiées. */
+    /** Constructeur de la grille avec des dimensions spécifiées.
+     * @param p_nbLignes
+     * @param p_nbColonnes */
     public GrilleDeCellules(int p_nbLignes, int p_nbColonnes) {
         this.nbLignes = p_nbLignes;
         this.nbColonnes = p_nbColonnes;
