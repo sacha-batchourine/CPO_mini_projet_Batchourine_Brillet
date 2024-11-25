@@ -7,7 +7,7 @@ package lightoff_batchourine_brillet_version_console;
 import Jeu.Partie;
 
 /**
- *Batchourine Brillet
+ *BATCHOURINEsacha BRILLETbaptiste
  * @author sachabatchourine
  */
 public class LightOff_BATCHOURINE_BRILLET_version_console {
