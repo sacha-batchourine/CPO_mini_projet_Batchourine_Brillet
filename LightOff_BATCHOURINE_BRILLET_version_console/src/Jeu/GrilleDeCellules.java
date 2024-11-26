@@ -6,6 +6,7 @@ package Jeu;
 import java.util.Random;
 /**
  *Classe qui représente la GrilleDeCellules
+ * BRILLET BATCHOURINE
  * @author baptistebrillet
  */
 public class GrilleDeCellules {
