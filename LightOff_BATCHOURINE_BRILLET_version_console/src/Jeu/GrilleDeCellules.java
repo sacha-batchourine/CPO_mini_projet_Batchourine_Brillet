@@ -10,7 +10,7 @@ import java.util.Random;
  * @author baptistebrillet
  */
 public class GrilleDeCellules {
-    private final CelluleLumineuse[][] matriceCellules;
+    public final CelluleLumineuse[][] matriceCellules;
     private final int nbLignes;
     private final int nbColonnes;
 
