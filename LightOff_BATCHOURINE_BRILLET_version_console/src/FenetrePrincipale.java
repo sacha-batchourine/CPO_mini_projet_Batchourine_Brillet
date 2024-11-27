@@ -161,7 +161,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         });
         getContentPane().add(btnLigne0, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
 
-        btnColonne0.setText("jButton1");
+        btnColonne0.setText("C1");
         btnColonne0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnColonne0ActionPerformed(evt);
@@ -280,7 +280,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLigne6ActionPerformed
 
     private void btnLigne7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLigne7ActionPerformed
-        this.grille.activerLigneDeCellules(3);
+        this.grille.activerLigneDeCellules(7);
     repaint();        // TODO add your handling code here:
     }//GEN-LAST:event_btnLigne7ActionPerformed
 
