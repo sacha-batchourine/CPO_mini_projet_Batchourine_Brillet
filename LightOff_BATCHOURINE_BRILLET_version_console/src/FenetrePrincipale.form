@@ -200,7 +200,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnColonne1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jButton1"/>
+        <Property name="text" type="java.lang.String" value="C2"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnColonne1ActionPerformed"/>
@@ -213,7 +213,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnColonne2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jButton1"/>
+        <Property name="text" type="java.lang.String" value="C3"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnColonne2ActionPerformed"/>
@@ -226,7 +226,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnColonne3">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jButton1"/>
+        <Property name="text" type="java.lang.String" value="C4"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnColonne3ActionPerformed"/>
@@ -239,7 +239,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnColonne4">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jButton1"/>
+        <Property name="text" type="java.lang.String" value="C5"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnColonne4ActionPerformed"/>
@@ -252,7 +252,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnColonne5">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jButton1"/>
+        <Property name="text" type="java.lang.String" value="C6"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnColonne5ActionPerformed"/>
@@ -265,7 +265,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnColonne6">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jButton1"/>
+        <Property name="text" type="java.lang.String" value="C8"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnColonne6ActionPerformed"/>
@@ -278,7 +278,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnColonne7">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jButton1"/>
+        <Property name="text" type="java.lang.String" value="C8"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnColonne7ActionPerformed"/>
@@ -291,7 +291,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnColonne8">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jButton1"/>
+        <Property name="text" type="java.lang.String" value="C9"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnColonne8ActionPerformed"/>
@@ -304,7 +304,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnColonne9">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jButton1"/>
+        <Property name="text" type="java.lang.String" value="C10"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnColonne9ActionPerformed"/>
