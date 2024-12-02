@@ -39,16 +39,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
     private void initComponents() {
 
         PanneauGrille = new javax.swing.JPanel();
-        btnLigne9 = new javax.swing.JButton();
-        btnLigne8 = new javax.swing.JButton();
-        btnLigne7 = new javax.swing.JButton();
-        btnLigne6 = new javax.swing.JButton();
-        btnLigne5 = new javax.swing.JButton();
-        btnLigne4 = new javax.swing.JButton();
-        btnLigne3 = new javax.swing.JButton();
-        btnLigne2 = new javax.swing.JButton();
-        btnLigne1 = new javax.swing.JButton();
-        btnLigne0 = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
         btnColonne0 = new javax.swing.JButton();
         btnColonne1 = new javax.swing.JButton();
         btnColonne2 = new javax.swing.JButton();
@@ -59,6 +50,17 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         btnColonne7 = new javax.swing.JButton();
         btnColonne8 = new javax.swing.JButton();
         btnColonne9 = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        btnLigne0 = new javax.swing.JButton();
+        btnLigne1 = new javax.swing.JButton();
+        btnLigne2 = new javax.swing.JButton();
+        btnLigne3 = new javax.swing.JButton();
+        btnLigne4 = new javax.swing.JButton();
+        btnLigne5 = new javax.swing.JButton();
+        btnLigne6 = new javax.swing.JButton();
+        btnLigne7 = new javax.swing.JButton();
+        btnLigne8 = new javax.swing.JButton();
+        btnLigne9 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(600, 400));
@@ -81,85 +83,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
 
         getContentPane().add(PanneauGrille, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 600, 410));
 
-        btnLigne9.setText("Ligne 10");
-        btnLigne9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLigne9ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnLigne9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, -1, -1));
-
-        btnLigne8.setText("Ligne 9");
-        btnLigne8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLigne8ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnLigne8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, -1, -1));
-
-        btnLigne7.setText("Ligne 8");
-        btnLigne7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLigne7ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnLigne7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, -1, -1));
-
-        btnLigne6.setText("Ligne 7");
-        btnLigne6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLigne6ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnLigne6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, -1, -1));
-
-        btnLigne5.setText("Ligne 6");
-        btnLigne5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLigne5ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnLigne5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, -1, -1));
-
-        btnLigne4.setText("Ligne 5");
-        btnLigne4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLigne4ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnLigne4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, -1, -1));
-
-        btnLigne3.setText("Ligne 4");
-        btnLigne3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLigne3ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnLigne3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, -1));
-
-        btnLigne2.setText("Ligne 3");
-        btnLigne2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLigne2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnLigne2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, -1, -1));
-
-        btnLigne1.setText("Ligne 2");
-        btnLigne1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLigne1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnLigne1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, -1, -1));
-
-        btnLigne0.setText("Ligne 1");
-        btnLigne0.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLigne0ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnLigne0, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, -1));
+        jPanel1.setLayout(new java.awt.GridLayout());
 
         btnColonne0.setText("C1");
         btnColonne0.addActionListener(new java.awt.event.ActionListener() {
@@ -167,7 +91,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
                 btnColonne0ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnColonne0, new org.netbeans.lib.awtextra.AbsoluteConstraints(113, 30, 60, -1));
+        jPanel1.add(btnColonne0);
 
         btnColonne1.setText("C2");
         btnColonne1.addActionListener(new java.awt.event.ActionListener() {
@@ -175,7 +99,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
                 btnColonne1ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnColonne1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 30, 60, -1));
+        jPanel1.add(btnColonne1);
 
         btnColonne2.setText("C3");
         btnColonne2.addActionListener(new java.awt.event.ActionListener() {
@@ -183,7 +107,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
                 btnColonne2ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnColonne2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 30, 60, -1));
+        jPanel1.add(btnColonne2);
 
         btnColonne3.setText("C4");
         btnColonne3.addActionListener(new java.awt.event.ActionListener() {
@@ -191,7 +115,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
                 btnColonne3ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnColonne3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 30, 60, -1));
+        jPanel1.add(btnColonne3);
 
         btnColonne4.setText("C5");
         btnColonne4.addActionListener(new java.awt.event.ActionListener() {
@@ -199,7 +123,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
                 btnColonne4ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnColonne4, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 30, 60, -1));
+        jPanel1.add(btnColonne4);
 
         btnColonne5.setText("C6");
         btnColonne5.addActionListener(new java.awt.event.ActionListener() {
@@ -207,7 +131,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
                 btnColonne5ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnColonne5, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 30, 60, -1));
+        jPanel1.add(btnColonne5);
 
         btnColonne6.setText("C7");
         btnColonne6.addActionListener(new java.awt.event.ActionListener() {
@@ -215,7 +139,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
                 btnColonne6ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnColonne6, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 30, 60, -1));
+        jPanel1.add(btnColonne6);
 
         btnColonne7.setText("C8");
         btnColonne7.addActionListener(new java.awt.event.ActionListener() {
@@ -223,7 +147,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
                 btnColonne7ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnColonne7, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 30, 60, -1));
+        jPanel1.add(btnColonne7);
 
         btnColonne8.setText("C9");
         btnColonne8.addActionListener(new java.awt.event.ActionListener() {
@@ -231,7 +155,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
                 btnColonne8ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnColonne8, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 30, 60, -1));
+        jPanel1.add(btnColonne8);
 
         btnColonne9.setText("C10");
         btnColonne9.addActionListener(new java.awt.event.ActionListener() {
@@ -239,7 +163,93 @@ public class FenetrePrincipale extends javax.swing.JFrame {
                 btnColonne9ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnColonne9, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 30, 60, -1));
+        jPanel1.add(btnColonne9);
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 0, 600, 60));
+
+        jPanel2.setLayout(new java.awt.GridLayout(10, 0));
+
+        btnLigne0.setText("Ligne 1");
+        btnLigne0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLigne0ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnLigne0);
+
+        btnLigne1.setText("Ligne 2");
+        btnLigne1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLigne1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnLigne1);
+
+        btnLigne2.setText("Ligne 3");
+        btnLigne2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLigne2ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnLigne2);
+
+        btnLigne3.setText("Ligne 4");
+        btnLigne3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLigne3ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnLigne3);
+
+        btnLigne4.setText("Ligne 5");
+        btnLigne4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLigne4ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnLigne4);
+
+        btnLigne5.setText("Ligne 6");
+        btnLigne5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLigne5ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnLigne5);
+
+        btnLigne6.setText("Ligne 7");
+        btnLigne6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLigne6ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnLigne6);
+
+        btnLigne7.setText("Ligne 8");
+        btnLigne7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLigne7ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnLigne7);
+
+        btnLigne8.setText("Ligne 9");
+        btnLigne8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLigne8ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnLigne8);
+
+        btnLigne9.setText("Ligne 10");
+        btnLigne9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLigne9ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnLigne9);
+
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 100, 410));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -406,6 +416,8 @@ public class FenetrePrincipale extends javax.swing.JFrame {
     private javax.swing.JButton btnLigne7;
     private javax.swing.JButton btnLigne8;
     private javax.swing.JButton btnLigne9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 GrilleDeCellules grille;
 int nbCoups;
