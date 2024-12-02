@@ -8,7 +8,7 @@ import javax.swing.JButton;
 
 /**
  *
- * @author baptistebrillet sacha batchourine
+ * @author baptistebrillet sachabatchourine
  */
 public class FenetrePrincipale extends javax.swing.JFrame {
     /**
