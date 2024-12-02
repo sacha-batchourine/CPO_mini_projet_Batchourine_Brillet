@@ -7,8 +7,8 @@ import java.awt.GridLayout;
 import javax.swing.JButton;
 
 /**
- *
- * @author baptistebrillet sachabatchourine
+ * baptistebrillet sachabatchourine
+ * @author
  */
 public class FenetrePrincipale extends javax.swing.JFrame {
     /**
