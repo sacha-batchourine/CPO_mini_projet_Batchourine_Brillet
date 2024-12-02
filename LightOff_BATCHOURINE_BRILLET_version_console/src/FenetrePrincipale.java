@@ -83,7 +83,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
 
         getContentPane().add(PanneauGrille, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 600, 410));
 
-        jPanel1.setLayout(new java.awt.GridLayout());
+        jPanel1.setLayout(new java.awt.GridLayout(1, 0));
 
         btnColonne0.setText("C1");
         btnColonne0.addActionListener(new java.awt.event.ActionListener() {
