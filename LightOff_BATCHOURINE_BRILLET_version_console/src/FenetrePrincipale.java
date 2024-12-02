@@ -14,21 +14,59 @@ public class FenetrePrincipale extends javax.swing.JFrame {
     /**
      * Creates new form FenetrePrincipale
      */
-    public FenetrePrincipale() {
-        initComponents();
-        int nbLignes = 10;
-        int nbColonnes = 10;
-        this.grille = new GrilleDeCellules(nbLignes, nbColonnes);
-        this.grille.melangerMatriceAleatoirement(10);
-        PanneauGrille.setLayout(new GridLayout(nbLignes, nbColonnes));
-        for (int i=0; i < nbLignes; i++) {
-        
-            for (int j=0; j < nbColonnes; j++ ) {
-                CelluleGraphique bouton_cellule = new CelluleGraphique( grille.matriceCellules[i][j], 36,36);
-                PanneauGrille.add(bouton_cellule); // ajout au Jpanel PanneauGrille
-            }
+    public FenetrePrincipale(int taille) {
+    initComponents();
+
+    // Adapter le panneau des colonnes
+    jPanel1.removeAll();
+    jPanel1.setLayout(new GridLayout(1, taille));
+    for (int i = 0; i < taille; i++) {
+        JButton btnColonne = new JButton("C" + (i + 1));
+        int colIndex = i; // Nécessaire pour la lambda dans addActionListener
+        btnColonne.addActionListener(evt -> {
+            grille.activerColonneDeCellules(colIndex);
+            repaint();
+        });
+        jPanel1.add(btnColonne);
+    }
+
+    // Adapter le panneau des lignes
+    jPanel2.removeAll();
+    jPanel2.setLayout(new GridLayout(taille, 1));
+    for (int i = 0; i < taille; i++) {
+        JButton btnLigne = new JButton("L" + (i + 1));
+        int rowIndex = i; // Nécessaire pour la lambda dans addActionListener
+        btnLigne.addActionListener(evt -> {
+            grille.activerLigneDeCellules(rowIndex);
+            repaint();
+        });
+        jPanel2.add(btnLigne);
+    }
+
+    // Adapter le panneau de la grille principale
+    PanneauGrille.removeAll();
+    PanneauGrille.setLayout(new GridLayout(taille, taille));
+
+    // Créer une nouvelle grille et mélanger
+    this.grille = new GrilleDeCellules(taille, taille);
+    grille.melangerMatriceAleatoirement(10);
+
+    // Ajouter les cellules au panneau
+    for (int i = 0; i < taille; i++) {
+        for (int j = 0; j < taille; j++) {
+            CelluleGraphique boutonCellule = new CelluleGraphique(grille.matriceCellules[i][j], 36, 36);
+            PanneauGrille.add(boutonCellule);
         }
     }
+
+    // Rafraîchir les composants
+    jPanel1.revalidate();
+    jPanel1.repaint();
+    jPanel2.revalidate();
+    jPanel2.repaint();
+    PanneauGrille.revalidate();
+    PanneauGrille.repaint();
+}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -418,7 +456,6 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FenetrePrincipale().setVisible(true);
             }
         });
     }
