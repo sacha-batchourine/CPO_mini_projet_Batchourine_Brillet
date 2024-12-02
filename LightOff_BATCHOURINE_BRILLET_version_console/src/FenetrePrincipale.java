@@ -63,18 +63,6 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         btnLigne7 = new javax.swing.JButton();
         btnLigne8 = new javax.swing.JButton();
         btnLigne9 = new javax.swing.JButton();
-        jPanel4 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jPanel5 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jPanel6 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jPanel7 = new javax.swing.JPanel();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
         jPanel8 = new javax.swing.JPanel();
         jButton7 = new javax.swing.JButton();
 
@@ -278,60 +266,10 @@ public class FenetrePrincipale extends javax.swing.JFrame {
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 100, 410));
 
-        jPanel4.setBackground(new java.awt.Color(255, 0, 51));
-        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setText("DIfficultés Temps : ");
-        jPanel4.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
-
-        jPanel5.setBackground(new java.awt.Color(255, 0, 0));
-        jPanel5.setLayout(new java.awt.GridLayout());
-
-        jButton1.setText("5min");
-        jPanel5.add(jButton1);
-
-        jButton2.setText("4min");
-        jPanel5.add(jButton2);
-
-        jButton3.setText("3min");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        jPanel5.add(jButton3);
-
-        jPanel4.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 290, 50));
-
-        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 210, 310, 140));
-
-        jPanel6.setBackground(new java.awt.Color(255, 0, 51));
-        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("DIfficultés Griles : ");
-        jPanel6.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
-
-        jPanel7.setBackground(new java.awt.Color(255, 0, 0));
-        jPanel7.setLayout(new java.awt.GridLayout());
-
-        jButton4.setText("Facile");
-        jPanel7.add(jButton4);
-
-        jButton5.setText("Moyen");
-        jPanel7.add(jButton5);
-
-        jButton6.setText("Difficile");
-        jPanel7.add(jButton6);
-
-        jPanel6.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 290, 50));
-
-        getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 60, 310, 140));
-
         jPanel8.setBackground(new java.awt.Color(255, 0, 51));
         jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton7.setText("Nouvelle partie");
+        jButton7.setText("Retour MENU");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
@@ -339,7 +277,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         });
         jPanel8.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 150, 50));
 
-        getContentPane().add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 360, 310, 110));
+        getContentPane().add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 60, 310, 110));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -444,10 +382,6 @@ public class FenetrePrincipale extends javax.swing.JFrame {
     repaint();        // TODO add your handling code here:
     }//GEN-LAST:event_btnColonne9ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
-
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton7ActionPerformed
@@ -514,22 +448,10 @@ public class FenetrePrincipale extends javax.swing.JFrame {
     private javax.swing.JButton btnLigne7;
     private javax.swing.JButton btnLigne8;
     private javax.swing.JButton btnLigne9;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     // End of variables declaration//GEN-END:variables
 GrilleDeCellules grille;
