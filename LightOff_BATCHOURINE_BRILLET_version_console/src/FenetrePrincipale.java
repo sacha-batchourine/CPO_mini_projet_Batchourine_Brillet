@@ -383,7 +383,9 @@ public class FenetrePrincipale extends javax.swing.JFrame {
     }//GEN-LAST:event_btnColonne9ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
+            DebutPartie  b = new DebutPartie();
+            b.setVisible(true);
+            this.dispose();        // TODO add your handling code here:        // TODO add your handling code here:
     }//GEN-LAST:event_jButton7ActionPerformed
 
     /**
