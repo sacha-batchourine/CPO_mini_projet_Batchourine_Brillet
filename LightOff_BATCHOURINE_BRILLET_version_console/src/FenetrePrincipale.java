@@ -5,68 +5,94 @@
 import Jeu.GrilleDeCellules;
 import java.awt.GridLayout;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 
 /**
  * baptistebrillet sachabatchourine
  * @author
  */
 public class FenetrePrincipale extends javax.swing.JFrame {
+    GrilleDeCellules grille;
+    int nbCoups;
     /**
      * Creates new form FenetrePrincipale
      */
     public FenetrePrincipale(int taille) {
-    initComponents();
+     initComponents();
 
-    // Adapter le panneau des colonnes
-    jPanel1.removeAll();
-    jPanel1.setLayout(new GridLayout(1, taille));
-    for (int i = 0; i < taille; i++) {
-        JButton btnColonne = new JButton("C" + (i + 1));
-        int colIndex = i; // Nécessaire pour la lambda dans addActionListener
-        btnColonne.addActionListener(evt -> {
-            grille.activerColonneDeCellules(colIndex);
-            repaint();
-        });
-        jPanel1.add(btnColonne);
+        // Adapter le panneau des colonnes
+        jPanel1.removeAll();
+        jPanel1.setLayout(new GridLayout(1, taille));
+        for (int i = 0; i < taille; i++) {
+            JButton btnColonne = new JButton("C" + (i + 1));
+            int colIndex = i;
+            btnColonne.addActionListener(evt -> {
+                grille.activerColonneDeCellules(colIndex);
+                repaint();
+                verifierVictoire(); // Vérifie après l'action
+            });
+            jPanel1.add(btnColonne);
+        }
+
+        // Adapter le panneau des lignes
+        jPanel2.removeAll();
+        jPanel2.setLayout(new GridLayout(taille, 1));
+        for (int i = 0; i < taille; i++) {
+            JButton btnLigne = new JButton("L" + (i + 1));
+            int rowIndex = i;
+            btnLigne.addActionListener(evt -> {
+                grille.activerLigneDeCellules(rowIndex);
+                repaint();
+                verifierVictoire(); // Vérifie après l'action
+            });
+            jPanel2.add(btnLigne);
+        }
+
+        // Adapter le panneau de la grille principale
+        PanneauGrille.removeAll();
+        PanneauGrille.setLayout(new GridLayout(taille, taille));
+
+        // Créer une nouvelle grille et mélanger
+        this.grille = new GrilleDeCellules(taille, taille);
+        grille.melangerMatriceAleatoirement(10);
+
+        // Ajouter les cellules au panneau
+        for (int i = 0; i < taille; i++) {
+            for (int j = 0; j < taille; j++) {
+                CelluleGraphique boutonCellule = new CelluleGraphique(grille.matriceCellules[i][j], 36, 36);
+                PanneauGrille.add(boutonCellule);
+            }
+        }
+
+        // Rafraîchir les composants
+        jPanel1.revalidate();
+        jPanel1.repaint();
+        jPanel2.revalidate();
+        jPanel2.repaint();
+        PanneauGrille.revalidate();
+        PanneauGrille.repaint();
+}
+    private boolean estVictoire() {
+        for (int i = 0; i < grille.getNbLignes(); i++) {
+            for (int j = 0; j < grille.getNbColonnes(); j++) {
+                if (!grille.matriceCellules[i][j].estEteint()) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 
-    // Adapter le panneau des lignes
-    jPanel2.removeAll();
-    jPanel2.setLayout(new GridLayout(taille, 1));
-    for (int i = 0; i < taille; i++) {
-        JButton btnLigne = new JButton("L" + (i + 1));
-        int rowIndex = i; // Nécessaire pour la lambda dans addActionListener
-        btnLigne.addActionListener(evt -> {
-            grille.activerLigneDeCellules(rowIndex);
-            repaint();
-        });
-        jPanel2.add(btnLigne);
-    }
-
-    // Adapter le panneau de la grille principale
-    PanneauGrille.removeAll();
-    PanneauGrille.setLayout(new GridLayout(taille, taille));
-
-    // Créer une nouvelle grille et mélanger
-    this.grille = new GrilleDeCellules(taille, taille);
-    grille.melangerMatriceAleatoirement(10);
-
-    // Ajouter les cellules au panneau
-    for (int i = 0; i < taille; i++) {
-        for (int j = 0; j < taille; j++) {
-            CelluleGraphique boutonCellule = new CelluleGraphique(grille.matriceCellules[i][j], 36, 36);
-            PanneauGrille.add(boutonCellule);
+    /**
+     * Arrête le jeu et affiche un message si toutes les lumières sont éteintes
+     */
+    private void verifierVictoire() {
+        if (estVictoire()) {
+            JOptionPane.showMessageDialog(this, "Félicitations, vous avez gagné !", "Victoire", JOptionPane.INFORMATION_MESSAGE);
+            System.exit(0); // Ferme l'application
         }
     }
 
-    // Rafraîchir les composants
-    jPanel1.revalidate();
-    jPanel1.repaint();
-    jPanel2.revalidate();
-    jPanel2.repaint();
-    PanneauGrille.revalidate();
-    PanneauGrille.repaint();
-}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -493,6 +519,4 @@ public class FenetrePrincipale extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel8;
     // End of variables declaration//GEN-END:variables
-GrilleDeCellules grille;
-int nbCoups;
 }
