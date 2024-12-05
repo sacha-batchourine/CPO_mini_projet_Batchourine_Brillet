@@ -5,7 +5,6 @@
 import Jeu.GrilleDeCellules;
 import java.awt.GridLayout;
 import javax.swing.JButton;
-import javax.swing.JOptionPane;
 
 /**
  * baptistebrillet sachabatchourine
@@ -88,8 +87,9 @@ public class FenetrePrincipale extends javax.swing.JFrame {
      */
     private void verifierVictoire() {
         if (estVictoire()) {
-            JOptionPane.showMessageDialog(this, "Félicitations, vous avez gagné !", "Victoire", JOptionPane.INFORMATION_MESSAGE);
-            System.exit(0); // Ferme l'application
+            FenetreVictoire fenetreVictoire = new FenetreVictoire();
+            fenetreVictoire.setVisible(true);
+            dispose();
         }
     }
 
