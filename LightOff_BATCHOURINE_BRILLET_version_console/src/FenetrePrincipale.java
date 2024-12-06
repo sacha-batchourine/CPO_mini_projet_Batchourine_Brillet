@@ -7,7 +7,7 @@ import java.awt.GridLayout;
 import javax.swing.JButton;
 import java.util.Timer;
 import java.util.TimerTask;
-import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
 
 /**
  * baptistebrillet sachabatchourine
@@ -27,7 +27,6 @@ public class FenetrePrincipale extends javax.swing.JFrame {
     // Initialiser le chronomètre à 1 minute (60 secondes)
     timeRemaining = 60;
     startTimer(); 
-        
         // Adapter le panneau des colonnes
         jPanel1.removeAll();
         jPanel1.setLayout(new GridLayout(1, taille));
@@ -81,21 +80,26 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         PanneauGrille.repaint();
 }   
     private void startTimer() {
-        timer = new Timer();
-        timer.scheduleAtFixedRate(new TimerTask() {
-            @Override
-            public void run() {
-                if (timeRemaining > 0) {
-                    timeRemaining--;
-                    System.out.println("Temps restant : " + timeRemaining + " secondes");
-                } else {
-                    timer.cancel();
+    timer = new Timer();
+    timer.scheduleAtFixedRate(new TimerTask() {
+        @Override
+        public void run() {
+            if (timeRemaining > 0) {
+                timeRemaining--;
+                // Met à jour le JLabel dans le thread Swing
+                SwingUtilities.invokeLater(() -> {
+                    Chrono.setText("Temps restant : " + timeRemaining + " secondes");
+                });
+            } else {
+                timer.cancel();
+                SwingUtilities.invokeLater(() -> {
                     FenetreDefaite fenetreDefaite = new FenetreDefaite();
                     fenetreDefaite.setVisible(true);
                     dispose();
-                }
+                });
             }
-        }, 0, 1000);
+        }
+    }, 0, 1000);
     }
     private boolean estVictoire() {
         for (int i = 0; i < grille.getNbLignes(); i++) {
@@ -155,6 +159,8 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         btnLigne9 = new javax.swing.JButton();
         jPanel8 = new javax.swing.JPanel();
         jButton7 = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        Chrono = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -369,6 +375,14 @@ public class FenetrePrincipale extends javax.swing.JFrame {
 
         getContentPane().add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 60, 310, 110));
 
+        jPanel4.setBackground(new java.awt.Color(102, 255, 102));
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Chrono.setText("Chrono");
+        jPanel4.add(Chrono, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, 170, 40));
+
+        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 190, 310, 110));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -518,6 +532,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Chrono;
     private javax.swing.JPanel PanneauGrille;
     private javax.swing.JButton btnColonne0;
     private javax.swing.JButton btnColonne1;
@@ -543,6 +558,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel8;
     // End of variables declaration//GEN-END:variables
 }
