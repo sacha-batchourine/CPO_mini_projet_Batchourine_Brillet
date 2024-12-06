@@ -389,7 +389,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Chrono.setText("Chrono");
-        jPanel4.add(Chrono, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 290, 40));
+        jPanel4.add(Chrono, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 30, 220, 40));
 
         getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 190, 310, 110));
 
