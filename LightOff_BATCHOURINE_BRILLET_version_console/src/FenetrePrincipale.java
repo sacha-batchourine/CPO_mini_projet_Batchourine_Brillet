@@ -5,6 +5,9 @@
 import Jeu.GrilleDeCellules;
 import java.awt.GridLayout;
 import javax.swing.JButton;
+import java.util.Timer;
+import java.util.TimerTask;
+import javax.swing.JOptionPane;
 
 /**
  * baptistebrillet sachabatchourine
@@ -13,12 +16,18 @@ import javax.swing.JButton;
 public class FenetrePrincipale extends javax.swing.JFrame {
     GrilleDeCellules grille;
     int nbCoups;
+    Timer timer;
+    int timeRemaining;
     /**
      * Creates new form FenetrePrincipale
      */
     public FenetrePrincipale(int taille) {
-     initComponents();
-
+    initComponents();
+     
+    // Initialiser le chronomètre à 1 minute (60 secondes)
+    timeRemaining = 60;
+    startTimer(); 
+        
         // Adapter le panneau des colonnes
         jPanel1.removeAll();
         jPanel1.setLayout(new GridLayout(1, taille));
@@ -70,7 +79,23 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         jPanel2.repaint();
         PanneauGrille.revalidate();
         PanneauGrille.repaint();
-}
+}   
+    private void startTimer() {
+        timer = new Timer();
+        timer.scheduleAtFixedRate(new TimerTask() {
+            @Override
+            public void run() {
+                if (timeRemaining > 0) {
+                    timeRemaining--;
+                    System.out.println("Temps restant : " + timeRemaining + " secondes");
+                } else {
+                    timer.cancel();
+                    JOptionPane.showMessageDialog(null, "PERDU !", "Fin de la partie", JOptionPane.INFORMATION_MESSAGE);
+                    dispose();
+                }
+            }
+        }, 0, 1000);
+    }
     private boolean estVictoire() {
         for (int i = 0; i < grille.getNbLignes(); i++) {
             for (int j = 0; j < grille.getNbColonnes(); j++) {
