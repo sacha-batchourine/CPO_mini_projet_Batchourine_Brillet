@@ -90,7 +90,8 @@ public class FenetrePrincipale extends javax.swing.JFrame {
                     System.out.println("Temps restant : " + timeRemaining + " secondes");
                 } else {
                     timer.cancel();
-                    JOptionPane.showMessageDialog(null, "PERDU !", "Fin de la partie", JOptionPane.INFORMATION_MESSAGE);
+                    FenetreDefaite fenetreDefaite = new FenetreDefaite();
+                    fenetreDefaite.setVisible(true);
                     dispose();
                 }
             }
