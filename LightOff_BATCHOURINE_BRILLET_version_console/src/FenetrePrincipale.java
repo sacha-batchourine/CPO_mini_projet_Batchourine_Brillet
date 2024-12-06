@@ -23,10 +23,20 @@ public class FenetrePrincipale extends javax.swing.JFrame {
      */
     public FenetrePrincipale(int taille) {
     initComponents();
-     
+    
     // Initialiser le chronomètre à 1 minute (60 secondes)
-    timeRemaining = 60;
-    startTimer(); 
+    switch (taille) {
+            case 5:
+                timeRemaining = 3 * 60; // 3 minutes
+                break;
+            case 7:
+                timeRemaining = 5 * 60; // 5 minutes
+                break;
+            case 10:
+                timeRemaining = 7 * 60; // 7 minutes
+                break;
+    } 
+    startTimer();
         // Adapter le panneau des colonnes
         jPanel1.removeAll();
         jPanel1.setLayout(new GridLayout(1, taille));
@@ -379,7 +389,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Chrono.setText("Chrono");
-        jPanel4.add(Chrono, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, 170, 40));
+        jPanel4.add(Chrono, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 290, 40));
 
         getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 190, 310, 110));
 
