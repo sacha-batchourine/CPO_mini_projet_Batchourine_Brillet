@@ -202,7 +202,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
             .addGap(0, 408, Short.MAX_VALUE)
         );
 
-        getContentPane().add(PanneauGrille, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 600, 410));
+        getContentPane().add(PanneauGrille, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 110, 600, 410));
 
         jPanel1.setLayout(new java.awt.GridLayout(1, 0));
 
@@ -286,7 +286,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         });
         jPanel1.add(btnColonne9);
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 0, 600, 60));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 50, 600, 60));
 
         jPanel2.setLayout(new java.awt.GridLayout(10, 0));
 
@@ -370,7 +370,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         });
         jPanel2.add(btnLigne9);
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 100, 410));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, 110, 410));
 
         jPanel8.setBackground(new java.awt.Color(153, 153, 153));
         jPanel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -382,18 +382,18 @@ public class FenetrePrincipale extends javax.swing.JFrame {
                 jButton7ActionPerformed(evt);
             }
         });
-        jPanel8.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, 150, 50));
+        jPanel8.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 20, 150, 50));
 
-        getContentPane().add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 490, 280, 110));
+        getContentPane().add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 530, 280, 90));
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 0));
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Chrono.setText("Chrono");
-        jPanel4.add(Chrono, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 30, 220, 40));
+        jPanel4.add(Chrono, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, 220, 40));
 
-        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 490, 310, 110));
+        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 530, 310, 90));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

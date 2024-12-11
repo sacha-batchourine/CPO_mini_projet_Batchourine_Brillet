@@ -30,12 +30,10 @@ CelluleLumineuse celluleLumineuseAssociee;
     super.paintComponent(g);
     Graphics2D g2d = (Graphics2D) g;
     Color color = null;
-        if (celluleLumineuseAssociee.estEteint()) {
-            
+        if (celluleLumineuseAssociee.estEteint()) {            
                 color = Color.GRAY;
         }
-        else{
-            
+        else{          
                 color= Color.YELLOW;
         }
     g2d.setColor(color);
