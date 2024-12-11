@@ -32,13 +32,13 @@ CelluleLumineuse celluleLumineuseAssociee;
     Color color = null;
         if (celluleLumineuseAssociee.estEteint()) {
             
-                color = Color.RED;
+                color = Color.GRAY;
         }
         else{
             
-                color= Color.BLACK;
+                color= Color.YELLOW;
         }
     g2d.setColor(color);
-    g2d.fillRect(0, 0, getWidth(), getHeight());
+    g2d.fillRect(3, 3, getWidth()-3, getHeight()-3);
 }
 }
