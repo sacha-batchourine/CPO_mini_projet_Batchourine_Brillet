@@ -40,4 +40,5 @@ public class CelluleLumineuse {
     public String toString() {
         return this.etat ? "X" : "O"; // X = allumé, O = éteint
     }
+
 }
