@@ -171,8 +171,6 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         jButton7 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         Chrono = new javax.swing.JLabel();
-        jPanel5 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -188,7 +186,8 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        PanneauGrille.setBackground(new java.awt.Color(0, 153, 255));
+        PanneauGrille.setBackground(new java.awt.Color(0, 0, 0));
+        PanneauGrille.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         PanneauGrille.setToolTipText("");
         PanneauGrille.setAutoscrolls(true);
 
@@ -196,11 +195,11 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         PanneauGrille.setLayout(PanneauGrilleLayout);
         PanneauGrilleLayout.setHorizontalGroup(
             PanneauGrilleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
+            .addGap(0, 598, Short.MAX_VALUE)
         );
         PanneauGrilleLayout.setVerticalGroup(
             PanneauGrilleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 410, Short.MAX_VALUE)
+            .addGap(0, 408, Short.MAX_VALUE)
         );
 
         getContentPane().add(PanneauGrille, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 600, 410));
@@ -373,7 +372,8 @@ public class FenetrePrincipale extends javax.swing.JFrame {
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 100, 410));
 
-        jPanel8.setBackground(new java.awt.Color(255, 0, 51));
+        jPanel8.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton7.setText("Retour MENU");
@@ -382,30 +382,18 @@ public class FenetrePrincipale extends javax.swing.JFrame {
                 jButton7ActionPerformed(evt);
             }
         });
-        jPanel8.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 150, 50));
+        jPanel8.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, 150, 50));
 
-        getContentPane().add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 60, 310, 110));
+        getContentPane().add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 490, 280, 110));
 
-        jPanel4.setBackground(new java.awt.Color(204, 0, 255));
+        jPanel4.setBackground(new java.awt.Color(255, 255, 0));
+        jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Chrono.setText("Chrono");
         jPanel4.add(Chrono, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 30, 220, 40));
 
-        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 190, 310, 110));
-
-        jPanel5.setBackground(new java.awt.Color(255, 204, 0));
-        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jButton1.setText("Règles du Jeu");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        jPanel5.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, -1, -1));
-
-        getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 320, 310, 90));
+        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 490, 310, 110));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -516,12 +504,6 @@ public class FenetrePrincipale extends javax.swing.JFrame {
             this.dispose();        // TODO add your handling code here:        // TODO add your handling code here:
     }//GEN-LAST:event_jButton7ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        RegleDuJeu  r = new RegleDuJeu();
-        r.setVisible(true);
-        this.dispose();        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -584,13 +566,11 @@ public class FenetrePrincipale extends javax.swing.JFrame {
     private javax.swing.JButton btnLigne7;
     private javax.swing.JButton btnLigne8;
     private javax.swing.JButton btnLigne9;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel8;
     // End of variables declaration//GEN-END:variables
 }
