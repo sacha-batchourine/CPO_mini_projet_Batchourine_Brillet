@@ -1,4 +1,4 @@
-package JeuInterfaceGraphique;
+package Jeu;
 
 
 import Jeu.CelluleLumineuse;
