@@ -14,6 +14,7 @@ public class RegleDuJeu extends javax.swing.JFrame {
      */
     public RegleDuJeu() {
         initComponents();
+        
     }
 
     /**
@@ -29,25 +30,20 @@ public class RegleDuJeu extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jTextField1 = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        Regle = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(153, 153, 255));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 0));
+        jPanel1.setMinimumSize(new java.awt.Dimension(800, 675));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel4.setBackground(new java.awt.Color(153, 0, 255));
+        jPanel4.setBackground(new java.awt.Color(102, 102, 102));
         jPanel4.setLayout(new java.awt.GridBagLayout());
 
-        jTextField1.setBackground(new java.awt.Color(153, 153, 255));
+        jTextField1.setBackground(new java.awt.Color(204, 204, 204));
         jTextField1.setText("Présentation des règles de LightOff");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -56,54 +52,10 @@ public class RegleDuJeu extends javax.swing.JFrame {
         });
         jPanel4.add(jTextField1, new java.awt.GridBagConstraints());
 
-        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 600, 30));
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 800, 30));
 
-        jPanel2.setBackground(new java.awt.Color(153, 153, 255));
+        jPanel2.setBackground(new java.awt.Color(153, 153, 153));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jTextField2.setForeground(new java.awt.Color(255, 102, 0));
-        jTextField2.setText("Le jeu se joue sur une grille composée de plusieurs lignes et colonnes");
-        jPanel2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, -1, -1));
-
-        jTextField4.setForeground(new java.awt.Color(255, 102, 0));
-        jTextField4.setText("Certaines cases commencent allumées et d’autres éteintes");
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, 370, -1));
-
-        jTextField3.setForeground(new java.awt.Color(255, 102, 0));
-        jTextField3.setText("Chaque case de la grille est une lumière qui peut être allumée ou éteinte");
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 440, -1));
-
-        jTextField5.setForeground(new java.awt.Color(204, 0, 204));
-        jTextField5.setText("À chaque tour, le joueur choisit soit une ligne, soit une colonne de la grille");
-        jPanel2.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, -1, -1));
-
-        jTextField6.setForeground(new java.awt.Color(204, 0, 204));
-        jTextField6.setText("Toutes les lumières dans cette ligne ou colonne vont changer d’état :");
-        jPanel2.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(37, 140, 430, -1));
-
-        jTextField7.setForeground(new java.awt.Color(204, 0, 204));
-        jTextField7.setText("• Si une lumière est allumée, elle devient éteinte.");
-        jPanel2.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, -1, -1));
-
-        jTextField8.setForeground(new java.awt.Color(204, 0, 204));
-        jTextField8.setText("• Si une lumière est éteinte, elle devient allumée.");
-        jPanel2.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, -1, -1));
-
-        jTextField9.setForeground(new java.awt.Color(255, 0, 51));
-        jTextField9.setText("L’objectif est d’éteindre toutes les lumières de la grille");
-        jPanel2.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, -1, -1));
-
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(58, 62, 510, -1));
 
         jButton1.setText("Retour MENU");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -111,7 +63,17 @@ public class RegleDuJeu extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 343, 110, 30));
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 420, 140, 40));
+
+        Regle.setBackground(new java.awt.Color(204, 204, 204));
+        Regle.setColumns(20);
+        Regle.setRows(5);
+        Regle.setText("               Le jeu se joue sur une grille composée de plusieurs lignes et colonnes\n\n              Chaque case de la grille est une lumière qui peut être allumée ou éteinte\n\n                        Certaines cases commencent allumées et d’autres éteintes\n\n\n              À chaque tour, le joueur choisit soit une ligne, soit une colonne de la grille\n\n                 Toutes les lumières dans cette ligne ou colonne vont changer d’état :\n\n• Si une lumière est allumée (couleur Jaune) , elle devient éteinte (couleur Gris).\n• Si une lumière est éteinte (couleur Gris), elle devient allumée (couleur Jaune).\n\n\n\n\t      L’objectif est d’éteindre toutes les lumières de la grille");
+        jScrollPane1.setViewportView(Regle);
+
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, 560, 320));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, 680, 520));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -121,18 +83,15 @@ public class RegleDuJeu extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 675, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
-
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
+    
+// TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -140,10 +99,6 @@ public class RegleDuJeu extends javax.swing.JFrame {
             d.setVisible(true);
             this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -181,18 +136,12 @@ public class RegleDuJeu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextArea Regle;
     private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 }

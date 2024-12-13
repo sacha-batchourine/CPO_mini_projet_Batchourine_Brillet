@@ -30,7 +30,6 @@ public class DebutPartie extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        Pseudo = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -40,6 +39,7 @@ public class DebutPartie extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel3.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel3.setMinimumSize(new java.awt.Dimension(800, 675));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setText("| Nouvelle Partie |");
@@ -48,7 +48,7 @@ public class DebutPartie extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 270, 140, 40));
+        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 190, 210, 70));
 
         jButton2.setText("| Règles Du Jeu |");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -56,17 +56,9 @@ public class DebutPartie extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 340, 140, 30));
+        jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 340, 210, 50));
 
-        Pseudo.setText("  | Entrer Votre Pseudo |  ");
-        Pseudo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PseudoActionPerformed(evt);
-            }
-        });
-        jPanel3.add(Pseudo, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 220, -1, -1));
-
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 700, 590));
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, 660, 550));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -109,10 +101,6 @@ public class DebutPartie extends javax.swing.JFrame {
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void PseudoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PseudoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PseudoActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -149,7 +137,6 @@ public class DebutPartie extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField Pseudo;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JPanel jPanel1;
