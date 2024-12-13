@@ -1,3 +1,5 @@
+package JeuInterfaceGraphique;
+
 
 import Jeu.CelluleLumineuse;
 import java.awt.Color;
