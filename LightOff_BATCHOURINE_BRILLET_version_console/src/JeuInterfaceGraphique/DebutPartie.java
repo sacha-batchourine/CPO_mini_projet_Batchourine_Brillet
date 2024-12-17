@@ -32,6 +32,9 @@ public class DebutPartie extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -50,7 +53,7 @@ public class DebutPartie extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 190, 210, 70));
+        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 300, 210, 70));
 
         jButton2.setText("| Règles Du Jeu |");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -58,9 +61,27 @@ public class DebutPartie extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 340, 210, 50));
+        jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 410, 210, 50));
+
+        jTextArea1.setEditable(false);
+        jTextArea1.setBackground(new java.awt.Color(102, 102, 102));
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Helvetica Neue", 2, 36)); // NOI18N
+        jTextArea1.setRows(5);
+        jTextArea1.setText("         \n         BIENVENUE DANS LE JEU \n\n                       LIGHT OFF");
+        jTextArea1.setAutoscrolls(false);
+        jTextArea1.setBorder(null);
+        jTextArea1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        jTextArea1.setFocusTraversalKeysEnabled(false);
+        jTextArea1.setFocusable(false);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 640, 230));
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, 660, 550));
+
+        jLabel1.setText("Le jeu est créé par Baptiste BRILLET et Sacha BATCHOURINE");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 630, 370, -1));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -141,8 +162,11 @@ public class DebutPartie extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }

@@ -45,8 +45,12 @@ public class RegleDuJeu extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(102, 102, 102));
         jPanel4.setLayout(new java.awt.GridBagLayout());
 
+        jTextField1.setEditable(false);
         jTextField1.setBackground(new java.awt.Color(204, 204, 204));
         jTextField1.setText("Présentation des règles de LightOff");
+        jTextField1.setAutoscrolls(false);
+        jTextField1.setFocusTraversalKeysEnabled(false);
+        jTextField1.setFocusable(false);
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
@@ -67,10 +71,14 @@ public class RegleDuJeu extends javax.swing.JFrame {
         });
         jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 420, 140, 40));
 
+        Regle.setEditable(false);
         Regle.setBackground(new java.awt.Color(204, 204, 204));
         Regle.setColumns(20);
         Regle.setRows(5);
         Regle.setText("               Le jeu se joue sur une grille composée de plusieurs lignes et colonnes\n\n              Chaque case de la grille est une lumière qui peut être allumée ou éteinte\n\n                        Certaines cases commencent allumées et d’autres éteintes\n\n\n              À chaque tour, le joueur choisit soit une ligne, soit une colonne de la grille\n\n                 Toutes les lumières dans cette ligne ou colonne vont changer d’état :\n\n• Si une lumière est allumée (couleur Jaune) , elle devient éteinte (couleur Gris).\n• Si une lumière est éteinte (couleur Gris), elle devient allumée (couleur Jaune).\n\n\n\n\t      L’objectif est d’éteindre toutes les lumières de la grille");
+        Regle.setAutoscrolls(false);
+        Regle.setFocusTraversalKeysEnabled(false);
+        Regle.setFocusable(false);
         jScrollPane1.setViewportView(Regle);
 
         jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, 560, 320));

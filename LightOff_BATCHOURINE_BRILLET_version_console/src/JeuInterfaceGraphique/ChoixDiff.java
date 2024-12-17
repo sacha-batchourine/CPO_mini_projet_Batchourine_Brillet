@@ -80,9 +80,13 @@ public class ChoixDiff extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(102, 102, 102));
         jPanel4.setLayout(new java.awt.GridBagLayout());
 
+        jTextField1.setEditable(false);
         jTextField1.setBackground(new java.awt.Color(204, 204, 204));
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField1.setText("Choix niveau de difficulté");
+        jTextField1.setAutoscrolls(false);
+        jTextField1.setFocusTraversalKeysEnabled(false);
+        jTextField1.setFocusable(false);
         jTextField1.setPreferredSize(new java.awt.Dimension(180, 25));
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

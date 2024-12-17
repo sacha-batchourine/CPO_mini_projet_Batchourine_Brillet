@@ -63,10 +63,14 @@
           <SubComponents>
             <Component class="javax.swing.JTextField" name="jTextField1">
               <Properties>
+                <Property name="editable" type="boolean" value="false"/>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="cc" green="cc" red="cc" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Pr&#xe9;sentation des r&#xe8;gles de LightOff"/>
+                <Property name="autoscrolls" type="boolean" value="false"/>
+                <Property name="focusTraversalKeysEnabled" type="boolean" value="false"/>
+                <Property name="focusable" type="boolean" value="false"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
@@ -122,12 +126,16 @@
               <SubComponents>
                 <Component class="javax.swing.JTextArea" name="Regle">
                   <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="cc" red="cc" type="rgb"/>
                     </Property>
                     <Property name="columns" type="int" value="20"/>
                     <Property name="rows" type="int" value="5"/>
                     <Property name="text" type="java.lang.String" value="               Le jeu se joue sur une grille compos&#xe9;e de plusieurs lignes et colonnes&#xa;&#xa;              Chaque case de la grille est une lumi&#xe8;re qui peut &#xea;tre allum&#xe9;e ou &#xe9;teinte&#xa;&#xa;                        Certaines cases commencent allum&#xe9;es et d&#x2019;autres &#xe9;teintes&#xa;&#xa;&#xa;              &#xc0; chaque tour, le joueur choisit soit une ligne, soit une colonne de la grille&#xa;&#xa;                 Toutes les lumi&#xe8;res dans cette ligne ou colonne vont changer d&#x2019;&#xe9;tat :&#xa;&#xa;&#x2022; Si une lumi&#xe8;re est allum&#xe9;e (couleur Jaune) , elle devient &#xe9;teinte (couleur Gris).&#xa;&#x2022; Si une lumi&#xe8;re est &#xe9;teinte (couleur Gris), elle devient allum&#xe9;e (couleur Jaune).&#xa;&#xa;&#xa;&#xa;&#x9;      L&#x2019;objectif est d&#x2019;&#xe9;teindre toutes les lumi&#xe8;res de la grille"/>
+                    <Property name="autoscrolls" type="boolean" value="false"/>
+                    <Property name="focusTraversalKeysEnabled" type="boolean" value="false"/>
+                    <Property name="focusable" type="boolean" value="false"/>
                   </Properties>
                 </Component>
               </SubComponents>
