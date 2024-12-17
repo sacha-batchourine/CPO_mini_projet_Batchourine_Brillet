@@ -1,5 +1,7 @@
 package JeuInterfaceGraphique;
 
+import javax.swing.SwingUtilities;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -17,7 +19,12 @@ public class FenetreVictoire extends javax.swing.JFrame {
     public FenetreVictoire() {
         initComponents();
     }
-
+    public FenetreVictoire(int score) {
+    initComponents();
+        SwingUtilities.invokeLater(() -> {
+                    Score.setText("Score : " + score + " points");
+        });
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -32,6 +39,7 @@ public class FenetreVictoire extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
+        Score = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -57,9 +65,17 @@ public class FenetreVictoire extends javax.swing.JFrame {
         });
         jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 260, 180, 60));
 
+        jTextField1.setEditable(false);
         jTextField1.setBackground(new java.awt.Color(102, 102, 102));
         jTextField1.setText("Félicitations, vous avez gagné !");
+        jTextField1.setAutoscrolls(false);
+        jTextField1.setFocusTraversalKeysEnabled(false);
+        jTextField1.setFocusable(false);
         jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, 200, 40));
+
+        Score.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Score.setText(" ");
+        jPanel2.add(Score, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 430, 180, 40));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, 660, 550));
 
@@ -125,6 +141,7 @@ ChoixDiff  C = new ChoixDiff();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Score;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JPanel jPanel1;

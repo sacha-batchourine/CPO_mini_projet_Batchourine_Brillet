@@ -57,9 +57,13 @@ public class FenetreDefaite extends javax.swing.JFrame {
         });
         jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 250, 170, 50));
 
+        jTextField1.setEditable(false);
         jTextField1.setBackground(new java.awt.Color(102, 102, 102));
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField1.setText("Dommage, Vous avez PERDU !");
+        jTextField1.setAutoscrolls(false);
+        jTextField1.setFocusTraversalKeysEnabled(false);
+        jTextField1.setFocusable(false);
         jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, 210, 40));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, 660, 550));

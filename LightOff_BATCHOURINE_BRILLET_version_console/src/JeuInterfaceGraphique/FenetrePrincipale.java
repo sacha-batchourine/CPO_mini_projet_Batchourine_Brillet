@@ -40,6 +40,8 @@ public class FenetrePrincipale extends javax.swing.JFrame {
                 break;
     } 
     startTimer();
+    
+    
         // Adapter le panneau des colonnes
         jPanel1.removeAll();
         jPanel1.setLayout(new GridLayout(1, taille));
@@ -114,6 +116,23 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         }
     }, 0, 1000);
     }
+    
+    private int calculerScore() {
+        double multiplicateur = 1.0;
+    switch (grille.getNbLignes()) { // Taille de la grille
+        case 5:
+            multiplicateur = 1.0; // Pas de changement
+            break;
+        case 7:
+            multiplicateur = 1.5; // Multiplicateur x1.5
+            break;
+        case 10:
+            multiplicateur = 2.0; // Multiplicateur x2
+            break;
+    }
+    return (int) (timeRemaining * multiplicateur); // Calcul du score final
+    }
+    
     private boolean estVictoire() {
         for (int i = 0; i < grille.getNbLignes(); i++) {
             for (int j = 0; j < grille.getNbColonnes(); j++) {
@@ -129,12 +148,14 @@ public class FenetrePrincipale extends javax.swing.JFrame {
      * Arrête le jeu et affiche un message si toutes les lumières sont éteintes
      */
     private void verifierVictoire() {
-        if (estVictoire()) {
-            FenetreVictoire fenetreVictoire = new FenetreVictoire();
-            fenetreVictoire.setVisible(true);
-            dispose();
-        }
+    if (estVictoire()) {
+        timer.cancel(); // Stoppe le chronomètre
+        int score = calculerScore(); // Calcule le score
+        FenetreVictoire fenetreVictoire = new FenetreVictoire(score);
+        fenetreVictoire.setVisible(true);
+        dispose();
     }
+}
 
 
     /**
