@@ -6,18 +6,29 @@ package Jeu;
 import java.util.Scanner;
 /**
  *Classe représentant une partie du jeu LightOff.
+ *   Fonctionnalités principales :
+ * - Gestion de la configuration de la partie.
+ * - Mélange initial de la grille en fonction du niveau de difficulté.
+ * - Interaction avec le joueur pour jouer
+ * - Gestion du chronomètre et détection des conditions de victoire ou de défaite.
  * @author baptistebrillet
  */
 public class Partie {
-      private GrilleDeCellules grille;
+    private GrilleDeCellules grille;
     private int nbCoups;
     private int niveauDifficulteTaille;
     private int niveauDifficulteTemps;
 
+    /**
+     * Constructeur par défaut qui démarre immédiatement le menu principal.
+     */
     public Partie() {
         afficherMenuPrincipal();
     }
 
+    /**
+     * Affiche le menu principal et gère les choix du joueur.
+     */
     public void afficherMenuPrincipal() {
         Scanner scanner = new Scanner(System.in);
         boolean quitter = false;
@@ -44,6 +55,11 @@ public class Partie {
         }
     }
 
+    /**
+     * Configure les paramètres de la partie en demandant au joueur de choisir :
+     * - La taille de la grille parmi trois niveaux de difficulté : facile, moyen, difficile.
+     * - La durée limite pour terminer la partie (3, 4 ou 5 minutes).
+     */
     public void configurerPartie() {
         Scanner scanner = new Scanner(System.in);
 
@@ -75,6 +91,9 @@ public class Partie {
         niveauDifficulteTemps = lireEntier(scanner, 1, 3);
     }
 
+    /**
+     * Initialise la partie en mélangeant aléatoirement la grille.
+     */
     public void initialiserPartie() {
         int nbMelanges = switch (niveauDifficulteTaille) {
             case 1 -> 5;  // Facile
@@ -85,6 +104,9 @@ public class Partie {
         grille.melangerMatriceAleatoirement(nbMelanges);
     }
 
+    /**
+     * Lance une partie et gère son déroulement.
+     */
     public void lancerPartie() {
         Scanner scanner = new Scanner(System.in);
         long tempsMax = switch (niveauDifficulteTemps) {
@@ -151,6 +173,13 @@ public class Partie {
         System.out.println("Félicitations ! Vous avez éteint toutes les lumières en " + nbCoups + " coups !");
     }
 
+    /**
+     * Lit un entier dans un intervalle donné, avec gestion des erreurs d'entrée.
+     * @param scanner L'objet Scanner pour lire les entrées utilisateur.
+     * @param min La valeur minimale acceptée.
+     * @param max La valeur maximale acceptée.
+     * @return Un entier valide dans l'intervalle [min, max].
+     */
     private int lireEntier(Scanner scanner, int min, int max) {
         int valeur;
         while (true) {

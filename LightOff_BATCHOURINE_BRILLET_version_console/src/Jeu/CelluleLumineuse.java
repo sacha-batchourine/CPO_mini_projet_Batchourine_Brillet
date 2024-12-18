@@ -11,7 +11,9 @@ package Jeu;
 public class CelluleLumineuse {
     private boolean etat; // true = allumé, false = éteint
 
-    /** Constructeur par défaut : initialise une cellule éteinte. */
+    /** Constructeur par défaut 
+     *  Initialise une cellule éteinte. 
+     */
     public CelluleLumineuse() {
         this.etat = false;
     }
@@ -35,7 +37,11 @@ public class CelluleLumineuse {
     public boolean getEtat() {
         return this.etat;
     }
-
+    
+    /**
+     * Chaque cellule est affichée avec son état actuel (allumée ou éteinte).
+     * @return Une chaîne représentant la grille de cellules sous forme textuelle.
+     */
     @Override
     public String toString() {
         return this.etat ? "X" : "O"; // X = allumé, O = éteint
