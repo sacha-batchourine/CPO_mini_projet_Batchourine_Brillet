@@ -7,12 +7,12 @@ package JeuInterfaceGraphique;
 
 /**
  *
- * @author baptistebrillet
+ * @author baptistebrillet batchourine sacha
  */
 public class RegleDuJeu extends javax.swing.JFrame {
 
-    /**
-     * Creates new form RegleDuJeu
+    /** 
+     * Creation de la fenetre regle du jeu 
      */
     public RegleDuJeu() {
         initComponents();

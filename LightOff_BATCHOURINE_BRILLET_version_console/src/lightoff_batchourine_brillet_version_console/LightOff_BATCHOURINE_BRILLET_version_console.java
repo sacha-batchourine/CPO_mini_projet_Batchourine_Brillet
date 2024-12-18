@@ -12,10 +12,10 @@ import Jeu.Partie;
  */
 public class LightOff_BATCHOURINE_BRILLET_version_console {
 
-    /**
+    /** Fonction principal qui lance le menu principal du jeu
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        new Partie(); // Lance le menu principal
+        new Partie(); 
     }
 }
