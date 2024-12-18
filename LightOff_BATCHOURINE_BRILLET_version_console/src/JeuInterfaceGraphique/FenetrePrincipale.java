@@ -72,7 +72,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
             });
             jPanel2.add(btnLigne);
         }
-
+        
         // Adapter le panneau de la grille principale
         PanneauGrille.removeAll();
         PanneauGrille.setLayout(new GridLayout(taille, taille));
@@ -205,6 +205,9 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         jButton7 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         Chrono = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
+        DiagonaleM = new javax.swing.JButton();
+        DiagonaleD = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -417,9 +420,9 @@ public class FenetrePrincipale extends javax.swing.JFrame {
                 jButton7ActionPerformed(evt);
             }
         });
-        jPanel8.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 20, 150, 50));
+        jPanel8.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 150, 50));
 
-        getContentPane().add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 530, 280, 90));
+        getContentPane().add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 530, 250, 90));
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 0));
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -428,7 +431,27 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         Chrono.setText("Chrono");
         jPanel4.add(Chrono, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, 220, 40));
 
-        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 530, 310, 90));
+        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 530, 280, 90));
+
+        jPanel5.setLayout(new java.awt.GridLayout(2, 0));
+
+        DiagonaleM.setText("Diagonale M");
+        DiagonaleM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DiagonaleMActionPerformed(evt);
+            }
+        });
+        jPanel5.add(DiagonaleM);
+
+        DiagonaleD.setText("Diagonale D");
+        DiagonaleD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DiagonaleDActionPerformed(evt);
+            }
+        });
+        jPanel5.add(DiagonaleD);
+
+        getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 530, 110, 90));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -538,6 +561,24 @@ public class FenetrePrincipale extends javax.swing.JFrame {
             b.setVisible(true);
             this.dispose();        // TODO add your handling code here:        // TODO add your handling code here:
     }//GEN-LAST:event_jButton7ActionPerformed
+    /**
+     * Permet de changer l'état des cellules de la diagonale Montante
+     * @param evt 
+     */
+    private void DiagonaleMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DiagonaleMActionPerformed
+        this.grille.activerDiagonaleMontante();
+        repaint();
+        verifierVictoire();
+    }//GEN-LAST:event_DiagonaleMActionPerformed
+    /**
+     * Permet de changer l'état des cellules de la diagonale Descendante
+     * @param evt 
+     */
+    private void DiagonaleDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DiagonaleDActionPerformed
+        this.grille.activerDiagonaleDescendante();
+        repaint();
+        verifierVictoire();      
+    }//GEN-LAST:event_DiagonaleDActionPerformed
 
     /**
      * @param args the command line arguments
@@ -582,6 +623,8 @@ public class FenetrePrincipale extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Chrono;
+    private javax.swing.JButton DiagonaleD;
+    private javax.swing.JButton DiagonaleM;
     private javax.swing.JPanel PanneauGrille;
     private javax.swing.JButton btnColonne0;
     private javax.swing.JButton btnColonne1;
@@ -608,6 +651,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel8;
     // End of variables declaration//GEN-END:variables
 }

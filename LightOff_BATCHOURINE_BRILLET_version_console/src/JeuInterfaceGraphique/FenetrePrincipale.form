@@ -278,7 +278,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="490" y="530" width="280" height="90"/>
+          <AbsoluteConstraints x="500" y="530" width="250" height="90"/>
         </Constraint>
       </Constraints>
 
@@ -295,7 +295,7 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="70" y="20" width="150" height="50"/>
+              <AbsoluteConstraints x="50" y="20" width="150" height="50"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -314,7 +314,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="170" y="530" width="310" height="90"/>
+          <AbsoluteConstraints x="200" y="530" width="280" height="90"/>
         </Constraint>
       </Constraints>
 
@@ -331,6 +331,36 @@
               <AbsoluteConstraints x="60" y="20" width="220" height="40"/>
             </Constraint>
           </Constraints>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="jPanel5">
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="60" y="530" width="110" height="90"/>
+        </Constraint>
+      </Constraints>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
+        <Property name="columns" type="int" value="0"/>
+        <Property name="rows" type="int" value="2"/>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JButton" name="DiagonaleM">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Diagonale M"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DiagonaleMActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="DiagonaleD">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Diagonale D"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DiagonaleDActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
